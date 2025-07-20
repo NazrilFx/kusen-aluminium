@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+        Jaya Abadi Aluminium
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        /* Custom scrollbar for horizontal scroll container */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-[#e0e0e0] font-sans">
+    <!-- Header Image -->
+    <header class="w-full flex justify-center items-center gap-5">
+        <img alt="Jaya Abadi Aluminium logo with red JAA letters inside a blue circle with crown on top, and text Jaya Abadi Aluminium in blue and Spesialis Kaca &amp; Aluminium in red"
+            class="w-[200px]" src="/logo.jpg" />
+        <h1 class="text-6xl font-bold"><span class="text-blue-500">Rumah</span> <span
+                class="text-green-500">Kusen</span> <span class="text-red-500">Aluminium</span></h1>
+    </header>
+    <!-- Navigation Bar -->
+    <nav class="bg-black text-white text-xs font-bold flex justify-center">
+        <ul class="flex items-center space-x-2 px-2 py-1 overflow-x-auto scrollbar-hide">
+            <li class="border border-black bg-black px-2 py-1 cursor-pointer select-none">
+                BERANDA
+            </li>
+            <li class="border border-black bg-black px-2 py-1 cursor-pointer select-none whitespace-nowrap">
+                KUNJUNGI TOKO KUSEN ALUMINIUM KACA TERBAIK DI BEKASI JAKARTA
+            </li>
+            <li
+                class="border border-black bg-black px-2 py-1 cursor-pointer select-none flex items-center whitespace-nowrap">
+                ARTIKEL
+                <i class="fas fa-caret-down ml-1">
+                </i>
+            </li>
+        </ul>
+    </nav>
+    <!-- Black Info Section -->
+    <section class="bg-black text-white px-6 py-4">
+        <h1 class="font-extrabold text-lg md:text-xl">
+            Rumah Kusen Alumunium
+        </h1>
+        <p class="text-xs md:text-sm mt-1">
+            Tukang Kusen Alumunium dan Pasang Kaca Bekasi Jakarta
+        </p>
+    </section>
+    <!-- Image Gallery with arrows -->
+    <section class="px-6 py-6 bg-[#e0e0e0]">
+        <div class="relative w-full max-w-4xl">
+            <!-- Tombol kiri -->
+            <button id="scrollLeft"
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+                <i class="fas fa-chevron-left text-xl text-gray-700"></i>
+            </button>
+
+            <!-- Galeri scroll -->
+            <div id="imageContainer" class="flex overflow-x-auto space-x-4 px-10 scrollbar-hide scroll-smooth">
+                <img src="bahan aluminium.jpg" alt="Aluminium 1"
+                    class="w-[150px] h-[150px] rounded-md object-cover flex-shrink-0">
+                <img src="foto 1.jpg" alt="Aluminium 2"
+                    class="w-[150px] h-[150px] rounded-md object-cover flex-shrink-0">
+                <img src="gudang.jpg" alt="Aluminium 3"
+                    class="w-[150px] h-[150px] rounded-md object-cover flex-shrink-0">
+                <img src="kanopi.jpg" alt="Aluminium 4"
+                    class="w-[150px] h-[150px] rounded-md object-cover flex-shrink-0">
+                <img src="kanopi 2.jpg" alt="Aluminium 5"
+                    class="w-[150px] h-[150px] rounded-md object-cover flex-shrink-0">
+                <img src="pintu aluminium.jpg" alt="Aluminium 6"
+                    class="w-[150px] h-[150px] rounded-md object-cover flex-shrink-0">
+                <img src="pintu kaca.jpg" alt="Aluminium 7"
+                    class="w-[150px] h-[150px] rounded-md object-cover flex-shrink-0">
+            </div>
+
+            <!-- Tombol kanan -->
+            <button id="scrollRight"
+                class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+                <i class="fas fa-chevron-right text-xl text-gray-700"></i>
+            </button>
+        </div>
+
+    </section>
+    <!-- WhatsApp floating button -->
+    <a aria-label="WhatsApp contact button"
+        class="fixed bottom-5 right-5 bg-green-600 hover:bg-green-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg"
+        href="https://wa.me/" rel="noopener noreferrer" target="_blank">
+        <i class="fab fa-whatsapp text-2xl">
+        </i>
+    </a>
+
+    <script>
+        const container = document.getElementById('imageContainer');
+        const leftBtn = document.getElementById('scrollLeft');
+        const rightBtn = document.getElementById('scrollRight');
+
+        leftBtn.addEventListener('click', () => {
+            container.scrollBy({ left: -200, behavior: 'smooth' });
+        });
+
+        rightBtn.addEventListener('click', () => {
+            container.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+
+</html>
